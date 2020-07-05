@@ -20,7 +20,7 @@ module.exports = {
     },
     plugins: [
         new HTMLPlugin({
-            filename: path.join(process.cwd(), 'build/index.html'),
+            filename: path.join(process.cwd(), 'dist/index.html'),
             template: path.resolve(process.cwd(), 'src/index.html')
         })
     ],

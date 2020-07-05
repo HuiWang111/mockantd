@@ -1,0 +1,27 @@
+@import './colors.less';
+
+@primary-color: @blue-base;
+@success-color: @green-base;
+@danger-color: @red-base;
+@warning-color: @orange-base;
+@info-color: @primary-color;
+
+@light-percent: 10%;
+@danger-light-percent: 20%;
+
+@primary-light-color: lighten(@primary-color, @light-percent);
+@danger-light-color: lighten(@danger-color, @danger-light-percent);
+
+@font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+@font-size-base: 14px;
+@font-size-default: @font-size-base;
+@font-size-sm: @font-size-base * .875;
+@font-size-lg: @font-size-base * 1.25;
+
+@border-radius-base: 2px;
+
+@border-color-base: @grey-base;
+
+@disabled-bg: #f5f5f5;
+@disabled-color: rgba(0,0,0,.25);

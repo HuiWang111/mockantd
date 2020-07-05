@@ -1,0 +1,146 @@
+@import (reference) '~styles/variables.less';
+@import './variables.less';
+
+.awesome-button {
+    position: relative;
+    display: inline-block;
+    font-weight: @btn-font-weight;
+    font-size: @font-size-default;
+    padding: @btn-padding-default;
+    background-image: none;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: @border-radius-base;
+    background-color: #fff;
+    border: 1px solid @border-color-base;
+    transition: @btn-transition;
+    white-space: nowrap;
+    height: @btn-height;
+    line-height: @btn-height - 2;
+    cursor: pointer;
+    box-sizing: border-box;
+  
+    &:focus,
+    &:hover,
+    &:active {
+        outline: none;
+        border-color: @primary-color;
+        color: @primary-color;
+    }
+  
+    &-primary {
+        background-color: @primary-color;
+        color: #fff;
+        border-color: @primary-color;
+    
+        &:focus,
+        &:hover,
+        &:active {
+            background-color: @primary-light-color;
+            color: #fff;
+            border-color: @primary-light-color;
+        }
+    }
+  
+    &-danger {
+        background-color: @danger-color;
+        color: #fff;
+        border-color: @danger-color;
+    
+        &:focus,
+        &:hover,
+        &:active {
+            background-color: @danger-light-color;
+            color: #fff;
+            border-color: @danger-light-color;
+        }
+    }
+  
+    &-dashed {
+        border-style: dashed;
+    }
+  
+    &-link {
+        border: none;
+        color: @primary-color;
+        background-color: transparent;
+    
+        &:not([href]) {
+            color: @primary-color;
+    
+            &:focus,
+            &:hover,
+            &:active {
+                color: @primary-light-color;
+                background-color: transparent;
+            }
+        }
+    
+        &:focus,
+        &:hover,
+        &:active {
+            color: @primary-light-color;
+            text-decoration: none;
+        }
+    }
+  
+    &-small {
+        padding: @btn-padding-sm;
+        font-size: @font-size-sm;
+        height: @btn-height-sm;
+        line-height: @btn-height-sm - 2;
+    }
+  
+    &-large {
+        padding: @btn-padding-lg;
+        font-size: @font-size-lg;
+        height: @btn-height-lg;
+        line-height: @btn-height-lg - 2;
+    }
+  
+    &-circle {
+        border-radius: 50%;
+        min-width: 32px;
+        padding-left: 0;
+        padding-right: 0;
+  
+        &.awesome-button-small {
+            min-width: 24px;
+        }
+    
+        &.awesome-button-large {
+            min-width: 40px;
+        }
+    }
+  
+    &-round {
+        border-radius: 32px;
+    }
+  
+    &-disabled {
+        color: @disabled-color;
+        text-shadow: none;
+        box-shadow: none;
+        cursor: not-allowed;
+    
+        &.awesome-button-link:not([href]) {
+            color: @disabled-color;
+        }
+    
+        &:not(.awesome-button-link) {
+            background-color: @disabled-bg;
+            border-color: @border-color-base;
+        }
+    
+        &:focus,
+        &:hover,
+        &:active {
+            color: @disabled-color;
+        }
+    }
+  
+    &-block {
+        width: 100%;
+        display: block;
+    }
+}

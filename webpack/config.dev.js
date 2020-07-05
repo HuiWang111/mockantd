@@ -6,7 +6,7 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'source-map',
   devServer: {
-    contentBase: path.join(process.cwd(), 'build'),
+    contentBase: path.join(process.cwd(), 'dist'),
     publicPath: 'http://localhost:8000/',
     hot: true,
     overlay: {

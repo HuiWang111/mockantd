@@ -16,7 +16,7 @@ module.exports = merge(common, {
   mode: 'production',
   output: {
     filename: 'mockantd.min.js',
-    path: path.join(process.cwd(), 'build'),
+    path: path.join(process.cwd(), 'dist'),
     publicPath: '/'
   },
   optimization: {
@@ -48,7 +48,7 @@ module.exports = merge(common, {
     }),
     new CleanWebpackPlugin(),
     new HTMLPlugin({
-      filename: path.join(process.cwd(), 'build/index.html'),
+      filename: path.join(process.cwd(), 'dist/index.html'),
       template: path.resolve(process.cwd(), 'src/index.html')
     })
   ]
