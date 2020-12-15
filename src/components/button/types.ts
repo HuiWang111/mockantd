@@ -1,6 +1,6 @@
 import React from 'react';
 
-export interface IButtonProps {
+export interface ButtonProps {
     type?: 'danger' | 'dashed' | 'default' | 'link' | 'primary';
     size?: 'default' | 'large' | 'small';
     shape?: 'default' | 'circle' | 'round';
