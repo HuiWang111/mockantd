@@ -1,28 +1,29 @@
 import React, { PropsWithChildren } from 'react';
 import classNames from 'classnames';
 import { ButtonType, ButtonSize, ButtonShape } from './enums';
-import { IButtonProps } from './types';
+import { ButtonProps } from './types';
+import './styles/button.less';
 
-const Button: React.FC<IButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
     type,
     size,
     shape,
     disabled,
     href,
-    onClick,
     block,
     htmlType,
     children,
     className,
-    style
-}: PropsWithChildren<IButtonProps>) => {
+    style,
+    onClick
+}: PropsWithChildren<ButtonProps>) => {
     const classes = classNames('awesome-button', {
         [`awesome-button-${type}`]: type && type !== ButtonType.Default,
         [`awesome-button-${size}`]: size && size !== ButtonSize.Default,
         [`awesome-button-${shape}`]: shape && shape !== ButtonShape.Default,
         'awesome-button-disabled': disabled,
         'awesome-button-block': block,
-        [className || '']: !!className
+        [className || '']: Boolean(className)
     });
 
     if (type === ButtonType.Link) {
@@ -66,5 +67,3 @@ Button.defaultProps = {
     disabled: false,
     block: false
 };
-
-export default Button;
