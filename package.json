@@ -6,6 +6,8 @@
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
     "start": "webpack-dev-server --config webpack/config.dev.js --inline --watch",
+    "storybook": "start-storybook",
+    "deploy": "source scripts/deploy.sh",
     "eslint": "eslint src --ext .ts,.tsx",
     "test": "jest"
   },
@@ -31,6 +33,8 @@
   },
   "devDependencies": {
     "@rollup/plugin-image": "^2.0.6",
+    "@storybook/addon-docs": "^6.1.11",
+    "@storybook/react": "^6.1.11",
     "@testing-library/jest-dom": "^5.11.0",
     "@testing-library/react": "^10.4.3",
     "@testing-library/user-event": "^12.0.11",

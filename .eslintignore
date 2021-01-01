@@ -5,3 +5,4 @@ node_modules/**
 webpack/**
 dist/**
 rollup.config.js
+scripts/**
