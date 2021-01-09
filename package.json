@@ -7,6 +7,7 @@
     "build": "NODE_ENV=production rollup -c",
     "start": "webpack-dev-server --config webpack/config.dev.js --inline --watch",
     "storybook": "start-storybook",
+    "build-storybook": "build-storybook --docs",
     "deploy": "source scripts/deploy.sh",
     "eslint": "eslint src --ext .ts,.tsx",
     "test": "jest"
@@ -45,6 +46,7 @@
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^3.4.0",
     "@typescript-eslint/parser": "^3.4.0",
+    "awesome-typescript-loader": "^5.2.1",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.6.0",
     "eslint": "^7.3.1",
@@ -55,6 +57,7 @@
     "jest": "^26.1.0",
     "less": "^3.11.3",
     "less-loader": "^5.0.0",
+    "react-docgen-typescript-loader": "^3.7.2",
     "rollup": "^2.35.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
