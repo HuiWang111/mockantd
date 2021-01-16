@@ -1,0 +1,3 @@
+export {
+    stopPropagationMethod
+} from './event';
