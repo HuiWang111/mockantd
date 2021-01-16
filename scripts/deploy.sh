@@ -6,6 +6,8 @@ tip() {
 
 br=`git branch | grep "*"`;
 branch=${br/* /};
+DIR_PATH="./temp/cjs/";
+FILE_NAME="/index.css";
 
 if test $branch = 'master'
 then 
@@ -16,8 +18,6 @@ else
     else
         echo "当前分支为：$branch";
         echo '';
-        DIR_PATH="./temp/cjs/";
-        FILE_NAME="/index.css";
 
         # rollup build
         rm -rf dist && npm run rollup;
@@ -29,6 +29,7 @@ else
         do
             file_path_name=`echo ${file#${DIR_PATH}}`;
             file_path=`echo ${file_path_name%${FILE_NAME}}`;
+            echo $file_path;
             mkdir ./dist/cjs/components/${file_path}/style;
             cp $file ./dist/cjs/components/${file_path}/style/;
             touch ./dist/cjs/components/${file_path}/style/css.js;
