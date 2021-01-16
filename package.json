@@ -4,10 +4,12 @@
   "description": "react + typescript仿antd组件",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production rollup -c",
+    "rollup": "NODE_ENV=production rollup -c",
     "start": "webpack-dev-server --config webpack/config.dev.js --inline --watch",
     "storybook": "start-storybook",
     "build-storybook": "build-storybook --docs",
+    "compile:cjs": "tsc --declaration --downlevelIteration --skipLibCheck --jsx react --module commonjs --target es5 --outDir dist/cjs",
+    "compile:es": "tsc --declaration --downlevelIteration --skipLibCheck --jsx react --module es2015 --target es2015 --outDir dist/es",
     "deploy": "source scripts/deploy.sh",
     "eslint": "eslint src --ext .ts,.tsx",
     "test": "jest"
@@ -33,7 +35,6 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "@rollup/plugin-image": "^2.0.6",
     "@storybook/addon-docs": "^6.1.11",
     "@storybook/react": "^6.1.11",
     "@testing-library/jest-dom": "^5.11.0",
@@ -59,6 +60,7 @@
     "less-loader": "^5.0.0",
     "react-docgen-typescript-loader": "^3.7.2",
     "rollup": "^2.35.1",
+    "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-postcss": "^3.1.8",
