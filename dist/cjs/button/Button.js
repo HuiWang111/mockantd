@@ -7,6 +7,7 @@ exports.Button = void 0;
 var react_1 = __importDefault(require("react"));
 var classnames_1 = __importDefault(require("classnames"));
 var enums_1 = require("./enums");
+require("./styles/button.less");
 exports.Button = function (_a) {
     var _b;
     var type = _a.type, size = _a.size, shape = _a.shape, disabled = _a.disabled, href = _a.href, block = _a.block, htmlType = _a.htmlType, children = _a.children, className = _a.className, style = _a.style, onClick = _a.onClick;

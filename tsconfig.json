@@ -20,7 +20,8 @@
     "baseUrl": "src"
   },
   "include": [
-    "src"
+    "src/components",
+    "src/utils"
   ]
 }
 
