@@ -29,7 +29,6 @@ else
         do
             file_path_name=`echo ${file#${DIR_PATH}}`;
             file_path=`echo ${file_path_name%${FILE_NAME}}`;
-            echo $file_path;
             mkdir ./dist/cjs/components/${file_path}/style;
             cp $file ./dist/cjs/components/${file_path}/style/;
             touch ./dist/cjs/components/${file_path}/style/css.js;
